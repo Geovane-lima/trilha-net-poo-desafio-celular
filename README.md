@@ -1,22 +1,40 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+📱 Desafio de Projeto: Abstração de Celulares em C# 🚀
+Este projeto faz parte do desafio proposto no módulo de Orientação a Objetos da trilha .NET da Digital Innovation One. O objetivo é criar uma aplicação console que modele o comportamento de diferentes marcas de celulares utilizando conceitos de orientação a objetos.
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
-
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
-
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
-
+📝 Descrição do Projeto
+O projeto consiste em desenvolver uma aplicação em .NET que simule o funcionamento de diferentes modelos de celulares (Nokia e iPhone), abstraindo suas características e comportamentos, de acordo com o diagrama abaixo:
 ![Diagrama classes](Imagens/diagrama.png)
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+🔧 Tecnologias Utilizadas
+1 - C#
+2 - .NET Core
+
+🛠️ Estrutura do Projeto
+Classe Abstrata Smartphone: Contém os atributos e métodos básicos que todo celular deve ter.
+1. Atributos:
+ - string Numero
+ - string Modelo
+ - string IMEI
+ - int Memoria
+2. Métodos:
+ - void Ligar(): Liga o celular.
+ - void ReceberLigacao(): Recebe uma chamada.
+ - abstract void InstalarAplicativo(string nomeApp): Método abstrato para instalar um aplicativo.
+  
+Classe Nokia: Herda da classe Smartphone e implementa o método InstalarAplicativo.
+Método:
+void InstalarAplicativo(string nomeApp): Lógica específica para instalar aplicativos em um Nokia.
+Classe Iphone: Herda da classe Smartphone e implementa o método InstalarAplicativo.
+Método:
+void InstalarAplicativo(string nomeApp): Lógica específica para instalar aplicativos em um iPhone.
+
+📊 Funcionalidades Demonstradas
+Criar instâncias de diferentes marcas de celulares.
+Simular ligações e recebimento de chamadas.
+Instalar aplicativos de acordo com a marca do celular.
+
+💡 Conceitos Aplicados
+Herança: As classes Nokia e Iphone herdam da classe Smartphone.
+Polimorfismo: Implementação do método InstalarAplicativo de forma diferente em cada classe filha.
+Abstração: Criação de uma classe base abstrata que define as propriedades e métodos comuns a todos os smartphones.
